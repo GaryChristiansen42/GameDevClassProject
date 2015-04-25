@@ -11,10 +11,11 @@ public class Maze : MonoBehaviour {
 	private MazeCell[,,] cells;
 	private int[,,] cellPositions;
 
-	public IEnumerator Generate () {
+	public IEnumerator Generate (TextAsset worldFile) {
 		WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
 		cells = new MazeCell[sizeX, sizeY ,sizeZ];
-		StreamReader reader = new StreamReader (@"C:\Users\User\Documents\Platformer\Assets\Scripts\platformWorld.txt");
+
+		StringReader reader = new StringReader (worldFile.text);
 		string s = reader.ReadLine ();
 		int posY=0;
 		int posZ=0;

@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
 	//public Player playerPrefab;
 	//private Player playerInstance;
 
+	public TextAsset worldFile;
+
 	private void Start () {
 		BeginGame();
 	}
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour {
 
 	private void BeginGame () {
 		mazeInstance = Instantiate(mazePrefab) as Maze;
-		StartCoroutine(mazeInstance.Generate());
+		StartCoroutine(mazeInstance.Generate(worldFile));
 		lavaInstance = Instantiate (lavaPrefab) as Lava;
 		//playerInstance = Instantiate (playerPrefab) as Player;
 		//StartCoroutine (playerInstance.Generate());
