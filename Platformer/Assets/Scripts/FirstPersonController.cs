@@ -13,7 +13,7 @@ public class FirstPersonController : MonoBehaviour {
 	float verticalVelocity = 0;
 
 	public float jumpSpeed = 5.0f;
-
+	//Comment
 	CharacterController characterController;
 	// Use this for initialization
 	void Start () {
