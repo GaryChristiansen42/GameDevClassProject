@@ -47,14 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
+     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameOverScript.cs" />
      <Compile Include="Assets\Scripts\HowToScript.cs" />
      <Compile Include="Assets\Scripts\Lava.cs" />
      <Compile Include="Assets\Scripts\Maze.cs" />
      <Compile Include="Assets\Scripts\MazeCell.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\PlayerBody.cs" />
      <Compile Include="Assets\Scripts\QuitScript.cs" />
      <Compile Include="Assets\Scripts\StartScript.cs" />
      <Compile Include="Assets\Scripts\VictoryScript.cs" />
