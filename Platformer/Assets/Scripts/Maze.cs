@@ -27,6 +27,15 @@ public class Maze : MonoBehaviour {
 						yield return delay;
 						CreateCell(x,posY,posZ);
 					}
+					if(c=='2'){
+						//TNT block
+					}
+					if(c=='3'){
+						//Falling block
+					}
+					if(c=='4'){
+						//Winning Flag
+					}
 				}
 				posZ++;
 			}else{
