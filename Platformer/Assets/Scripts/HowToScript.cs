@@ -8,6 +8,10 @@ public class HowToScript : MonoBehaviour {
 	
 	public Graphic text;
 
+	void Start () {
+		Screen.lockCursor = false;
+	}
+
 	public void OnMouseEnter(){
 		text.color = Color.white;
 	}
