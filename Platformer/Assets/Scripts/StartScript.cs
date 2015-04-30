@@ -30,6 +30,10 @@ public class StartScript : MonoBehaviour {
 		Application.LoadLevel ("GameScene");
 	}
 
+	void Start () {
+		Screen.lockCursor = false;
+	}
+
 	public void Update(){
 		bool hovered = false;
 		

@@ -29,7 +29,11 @@ public class QuitScript : MonoBehaviour {
 	void NewScene(){
 		Application.Quit ();
 	}
-	
+
+	void Start () {
+		Screen.lockCursor = false;
+	}
+
 	public void Update(){
 		bool hovered = false;
 		
