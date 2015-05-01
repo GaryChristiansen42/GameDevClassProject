@@ -11,7 +11,9 @@ public class Maze : MonoBehaviour {
 	private MazeCell[,,] cells;
 	private int[,,] cellPositions;
 
-	public IEnumerator Generate (TextAsset worldFile) {
+	// public IEnumerator Generate (TextAsset worldFile) {
+		
+	public void Generate (TextAsset worldFile) {
 		WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
 		cells = new MazeCell[sizeX, sizeY ,sizeZ];
 
@@ -24,8 +26,12 @@ public class Maze : MonoBehaviour {
 				for(int x = 0; x<s.Length;x++){
 					char c = s[x];
 					if(c=='1'){
-						yield return delay;
-						CreateCell(x,posY,posZ);
+						// yield return delay;
+						CreateCell(x,posY,posZ,"Fixed");
+					}
+					if(c=='2'){
+						// yield return delay;
+						CreateCell(x,posY,posZ,"Falling");
 					}
 				}
 				posZ++;
@@ -37,12 +43,13 @@ public class Maze : MonoBehaviour {
 		}
 	}
 
-	private void CreateCell (int x, int y,int z) {
+	private void CreateCell (int x, int y,int z,string blockType) {
 		MazeCell newCell = Instantiate(cellPrefab) as MazeCell;
 		cells[x, y ,z] = newCell;
-		newCell.name = "Maze Cell " + x + ", " + y + ", " + z;
 		newCell.transform.parent = transform;
 		newCell.transform.localPosition = new Vector3(x - sizeX * 0.5f + 0.5f,  y - sizeY * 0.5f + 0.5f,z - sizeZ * 0.5f + 0.5f);
+		newCell.blockType=blockType;
+		newCell.name = "Maze Cell " + x + ", " + y + ", " + z+" Block Type: "+blockType;
 	}
 	//End of Author: Jonathan Moore
 }
