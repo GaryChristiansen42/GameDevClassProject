@@ -2,6 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MazeCell.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\FirstPersonController.cs" Line="60" Column="3" />
       <File FileName="Assets\Scripts\platformWorld.txt" Line="496" Column="1" />
       <File FileName="Assets\Scripts\GameManager.cs" Line="44" Column="2" />
@@ -9,6 +10,9 @@
       <File FileName="Assets\Scripts\MazeCell.cs" Line="17" Column="6" />
       <File FileName="Assets\Scripts\Maze.cs" Line="52" Column="28" />
       <File FileName="Assets\Scripts\HowToScript.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Scripts\platformWorld.txt" Line="1" Column="1" />
+>>>>>>> origin/BetterBranch
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
