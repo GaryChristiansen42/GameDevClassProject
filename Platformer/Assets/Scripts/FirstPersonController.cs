@@ -50,4 +50,17 @@ public class FirstPersonController : MonoBehaviour {
 
 		characterController.Move (speed * Time.deltaTime);
 	}
+
+	void OnTriggerEnter(Collider col){
+
+		GameObject parent = null; 
+		try {
+			parent = col.gameObject.transform.parent.gameObject;
+		} catch { }
+
+		if (col.gameObject.name.Equals("Lava"))
+			Application.LoadLevel ("GameOver");
+		else if (parent.name.Equals ("Falling"))
+			Destroy (parent);
+	}
 }
