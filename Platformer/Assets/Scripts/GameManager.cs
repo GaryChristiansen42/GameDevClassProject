@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
 		// StartCoroutine(mazeInstance.Generate(worldFile));
 		mazeInstance.Generate(worldFile);
 		lavaInstance = Instantiate (lavaPrefab) as Lava;
+		lavaInstance.name = "Lava";
 		//playerInstance = Instantiate (playerPrefab) as Player;
 		//StartCoroutine (playerInstance.Generate());
 	}

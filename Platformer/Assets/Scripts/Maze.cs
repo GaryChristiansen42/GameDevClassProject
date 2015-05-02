@@ -49,7 +49,7 @@ public class Maze : MonoBehaviour {
 		newCell.transform.parent = transform;
 		newCell.transform.localPosition = new Vector3(x - sizeX * 0.5f + 0.5f,  y - sizeY * 0.5f + 0.5f,z - sizeZ * 0.5f + 0.5f);
 		newCell.blockType=blockType;
-		newCell.name = "Maze Cell " + x + ", " + y + ", " + z+" Block Type: "+blockType;
+		newCell.name = blockType;
 	}
 	//End of Author: Jonathan Moore
 }

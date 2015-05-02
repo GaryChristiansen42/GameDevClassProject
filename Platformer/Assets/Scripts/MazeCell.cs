@@ -14,6 +14,14 @@ public class MazeCell : MonoBehaviour {
 		//if(col.gameObject.tag=="Player"&&blockType=="Falling"){
 		//	GetComponent<Rigidbody>().useGravity=true;
 		//}
-		Destroy (this);
+		// Destroy (this);
+	}
+
+	void OnTriggerEnter(Collider col){
+		//Debug.Log ("I am being touched");
+		//if(col.gameObject.tag=="Player"&&blockType=="Falling"){
+		//	GetComponent<Rigidbody>().useGravity=true;
+		//}
+		// Destroy (this);
 	}
 }
