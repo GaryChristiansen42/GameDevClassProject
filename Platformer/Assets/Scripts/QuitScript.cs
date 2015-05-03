@@ -19,7 +19,7 @@ public class QuitScript : MonoBehaviour {
 	
 	public void OnMouseUp(){
 		Invoke ("PlaySound", 0);
-		Invoke ("NewScene", 2); 
+		Invoke ("NewScene", 4); 
 	}
 	
 	void PlaySound(){
