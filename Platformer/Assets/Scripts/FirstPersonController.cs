@@ -52,7 +52,7 @@ public class FirstPersonController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-
+		Debug.Log (col.gameObject.name);
 		GameObject parent = null; 
 		try {
 			parent = col.gameObject.transform.parent.gameObject;
@@ -60,7 +60,11 @@ public class FirstPersonController : MonoBehaviour {
 
 		if (col.gameObject.name.Equals("Lava"))
 			Application.LoadLevel ("GameOver");
+		else if (col.gameObject.name.Equals ("Goal")) 
+			Application.LoadLevel ("Victory");
 		else if (parent.name.Equals ("Falling"))
 			Destroy (parent);
+
 	}
+
 }
